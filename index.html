@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ar" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vevo Store — Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+
+  <div class="topbar">
+    <div class="container nav">
+      <a href="V Home.html"><div class="brand">V</div></a>
+      <a id="nav-home" href="index.html" data-link>Home</a>
+      <a id="nav-products" href="products.html" data-link>Products</a>
+      <a id="nav-profile" href="profile.html" data-link>Profile</a>
+      <a id="nav-cart" href="cart.html" data-link>My Cart</a>
+      <a id="nav-contact" href="contact.html" data-link>Contact Us</a>
+      <div class="spacer"></div>
+      <a href="login.html">Log in or Sign up</a>
+      <a href="vevo arabic/index-ar.html"><span class="icon">🌐</span></a>
+    </div>
+  </div>
+
+<main class="container">
+
+  <div class="hero" aria-label="Hero">
+    <h1>Your movements are easy and safe.</h1>
+  </div>
+
+  <h2>Latest Offers</h2>
+  <div id="offerGrid" class="grid"></div>
+
+  <div class="discount">
+    <div class="discount-left">
+      <div class="mark">✓</div>
+      <div>
+        <h3 class="m0">Discount for monthly clients!</h3>
+        <p class="m0 muted">share us what you buy..</p>
+      </div>
+    </div>
+    <img class="discount-img" src="assets/banner.jpg" alt="shopping banner">
+  </div>
+
+  <section id="categories" class="section">
+    <div class="container">
+      <div class="toolbar">
+        <h2>Categories</h2>
+        <a class="btn" href="products.html">see all →</a>
+      </div>
+
+      <div class="cat-grid">
+        <a class="cat" href="products.html?cat=accessories">
+          <img src="assets/cat-1.jpg" alt="Accessories">
+          <span class="label">Accessories</span>
+        </a>
+
+        <a class="cat" href="products.html?cat=shoes">
+          <img src="assets/cat-2.jpg" alt="Shoes">
+          <span class="label">Shoes</span>
+        </a>
+
+        <a class="cat" href="products.html?cat=bags">
+          <img src="assets/cat-3.jpg" alt="Hand bag">
+          <span class="label">Hand bag</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2>What People Say For Us</h2>
+      <div class="list">
+        <div class="item">
+          <img class="avatar" src="assets/u1.jpg" alt="Rami">
+          <div>
+            <strong>Rami Ahmed</strong>
+            <div class="meta">this is good, thank you</div>
+          </div>
+          <div class="likes">👍 11k</div>
+        </div>
+
+        <div class="item">
+          <img class="avatar" src="assets/u2.jpg" alt="Gehad">
+          <div>
+            <strong>Gehad Mor.</strong>
+            <div class="meta">wow great!</div>
+          </div>
+          <div class="likes">👍 11k</div>
+        </div>
+
+        <div class="item item-input">
+          <img class="avatar" src="assets/u3.jpg" alt="you">
+          <input class="input" placeholder="add comment ...">
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<main class="container">
+
+  <h2>Contact Us</h2>
+  <div class="card"><div class="p">
+    <div class="row">
+      <input class="input" placeholder="your email">
+      <input class="input" placeholder="leave a message">
+    </div>
+    <div style="height:12px"></div>
+    <button class="btn">Submit</button>
+  </div></div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <div class="brand brand-light">
+            <div class="logo">V</div><strong>Vevo</strong>
+          </div>
+          <p>website for clothing, you can order now and we will deliver where you live..</p>
+        </div>
+        <div>
+          <p>we start this branding to align our culture and help teenagers choose their style</p>
+        </div>
+      </div>
+
+      <div class="foot-row">
+        <span>📍 Gaza, Alremal Street</span>
+        <span>📞 0597777773</span>
+        <span>📧 Yousf23@Gmail.Com</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="overlay" id="loginOv">
+    <div class="modal" role="dialog" aria-labelledby="loginTitle">
+      <header id="loginTitle">Log In</header>
+      <div class="body">
+        <input id="liEmail" class="input" placeholder="Email">
+        <div style="height:10px"></div>
+        <input id="liPass" class="input" type="password" placeholder="Password">
+        <div style="height:10px"></div>
+        <button class="btn" onclick="doLogin()" style="width:100%">Enter</button>
+        <div style="height:10px"></div>
+        <button class="btn secondary" style="width:100%" onclick="social('Google')">log in with Gmail account</button>
+        <div style="height:6px"></div>
+        <button class="btn secondary" style="width:100%" onclick="social('Facebook')">log in with Facebook account</button>
+        <div style="height:6px"></div>
+        <a href="#" onclick="signup()">Create a new account</a>
+      </div>
+      <div class="actions">
+        <button class="btn secondary" onclick="closeLogin()">Close</button>
+      </div>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>

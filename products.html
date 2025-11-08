@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ar" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vevo Store — Products</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="products">
+
+ <<div class="topbar">
+    <div class="container nav">
+      <a href="V Home.html"><div class="brand">V</div></a>
+      <a id="nav-home" href="index.html" data-link>Home</a>
+      <a id="nav-products" href="products.html" data-link>Products</a>
+      <a id="nav-profile" href="profile.html" data-link>Profile</a>
+      <a id="nav-cart" href="cart.html" data-link>My Cart</a>
+      <a id="nav-contact" href="contact.html" data-link>Contact Us</a>
+      <div class="spacer"></div>
+      <a href="login.html">Log in or Sign up</a>
+      <a href="vevo arabic/products-ar.html"><span class="icon">🌐</span></a>
+    </div>
+  </div>
+
+  <main class="container" style="padding-bottom:60px">
+
+    <header style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px;margin:20px 0 30px">
+      <div>
+        <h1 style="margin:0;font-size:28px;line-height:1.2;font-weight:700;color:var(--ink,#111)">Our Products</h1>
+        <p class="muted" style="margin:4px 0 0;font-size:15px;line-height:1.4">
+          Browse and choose what you like ✨
+        </p>
+      </div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn secondary" href="products.html">All</a>
+        <a class="btn secondary" href="products.html?cat=accessories">Accessories</a>
+        <a class="btn secondary" href="products.html?cat=shoes">Shoes</a>
+        <a class="btn secondary" href="products.html?cat=bags">Bags</a>
+        <a class="btn secondary" href="products.html?cat=clothes">Clothes</a>
+      </div>
+    </header>
+
+
+    <section id="singleCatSection" style="margin-bottom:40px">
+      <div id="productsGrid" class="grid"></div>
+    </section>
+
+
+    <section id="allCatsSection" style="margin-bottom:40px">
+
+      <div style="margin-bottom:32px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <h2 style="margin:0;font-size:22px;font-weight:700;color:var(--ink,#111)">Bags</h2>
+          <a class="btn" href="products.html?cat=bags">see all →</a>
+        </div>
+        <div id="bagsGrid" class="grid"></div>
+      </div>
+
+      <div style="margin-bottom:32px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <h2 style="margin:0;font-size:22px;font-weight:700;color:var(--ink,#111)">Shoes</h2>
+          <a class="btn" href="products.html?cat=shoes">see all →</a>
+        </div>
+        <div id="shoesGrid" class="grid"></div>
+      </div>
+
+      <div style="margin-bottom:32px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <h2 style="margin:0;font-size:22px;font-weight:700;color:var(--ink,#111)">Accessories</h2>
+          <a class="btn" href="products.html?cat=accessories">see all →</a>
+        </div>
+        <div id="accGrid" class="grid"></div>
+      </div>
+
+      <div style="margin-bottom:32px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <h2 style="margin:0;font-size:22px;font-weight:700;color:var(--ink,#111)">Clothes</h2>
+          <a class="btn" href="products.html?cat=clothes">see all →</a>
+        </div>
+        <div id="clothesGrid" class="grid"></div>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <div class="brand brand-light"><div class="logo">V</div><strong>Vevo</strong></div>
+          <p>website for clothing, you can order now and we will deliver where you live..</p>
+        </div>
+        <div>
+          <p>we start this branding to align our culture and help teenagers choose their style</p>
+        </div>
+      </div>
+      <div class="foot-row">
+        <span>📍 Gaza, Alremal Street</span>
+        <span>📞 0597777773</span>
+        <span>📧 Yousf23@Gmail.Com</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="overlay" id="loginOv">
+    <div class="modal" role="dialog" aria-labelledby="loginTitle">
+      <header id="loginTitle">Log In</header>
+      <div class="body">
+        <input id="liEmail" class="input" placeholder="Email">
+        <div style="height:10px"></div>
+        <input id="liPass" class="input" type="password" placeholder="Password">
+        <div style="height:10px"></div>
+        <button class="btn" onclick="doLogin()" style="width:100%">Enter</button>
+        <div style="height:10px"></div>
+        <button class="btn secondary" style="width:100%" onclick="social('Google')">log in with Gmail account</button>
+        <div style="height:6px"></div>
+        <button class="btn secondary" style="width:100%" onclick="social('Facebook')">log in with Facebook account</button>
+        <div style="height:6px"></div>
+        <a href="#" onclick="signup()">Create a new account</a>
+      </div>
+      <div class="actions">
+        <button class="btn secondary" onclick="closeLogin()">Close</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="app.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const params = new URLSearchParams(location.search);
+      const cat = params.get('cat');
+
+      const singleSec = document.getElementById('singleCatSection');
+      const allSec = document.getElementById('allCatsSection');
+
+      if(cat){
+       
+        if(allSec) allSec.style.display = 'none';
+        if(singleSec) singleSec.style.display = 'block';
+      }else{
+        if(allSec) allSec.style.display = 'block';
+        if(singleSec) singleSec.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ar" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vevo Store — Product</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="product">
+
+  <div class="topbar">
+    <div class="container nav">
+      <a href="V Home.html"><div class="brand">V</div></a>
+      <a id="nav-home" href="index.html" data-link>Home</a>
+      <a id="nav-products" href="products.html" data-link>Products</a>
+      <a id="nav-profile" href="profile.html" data-link>Profile</a>
+      <a id="nav-cart" href="cart.html" data-link>My Cart</a>
+      <a id="nav-contact" href="contact.html" data-link>Contact Us</a>
+      <div class="spacer"></div>
+      <a href="login.html">Log in or Sign up</a>
+      <a href="vevo arabic/product-ar.html"><span class="icon">🌐</span></a>
+    </div>
+  </div>
+
+<main class="container">
+
+  <div class="detail">
+    <img id="pdImg" alt="product" style="border-radius:var(--radius);box-shadow:var(--shadow)">
+    <div>
+      <h2 id="pdName">Accessories</h2>
+      <div class="stars">★★★★★</div>
+      <div id="pdPrice" class="price">25$</div>
+      <h3>product description</h3>
+      <p id="pdDesc" class="muted"></p>
+      <div style="display:flex;gap:8px;align-items:center">
+        <label>Quantity</label>
+        <div class="qty">
+          <button id="qtyMinus">−</button>
+          <input id="pdQty" value="1" inputmode="numeric" />
+          <button id="qtyPlus">+</button>
+        </div>
+        <button id="btnAddDetail" class="btn">🛒 add to cart</button>
+        <button id="btnWish" class="btn secondary">♡</button>
+      </div>
+    </div>
+  </div>
+
+  <h2>Related Products</h2>
+  <div class="grid" id="relatedGrid"></div>
+
+</main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <div class="brand brand-light"><div class="logo">V</div><strong>Vevo</strong></div>
+          <p>website for clothing, you can order now and we will deliver where you live..</p>
+        </div>
+        <div>
+          <p>we start this branding to align our culture and help teenagers choose their style</p>
+        </div>
+      </div>
+      <div class="foot-row">
+        <span>📍 Gaza, Alremal Street</span>
+        <span>📞 0597777773</span>
+        <span>📧 Yousf23@Gmail.Com</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="overlay" id="loginOv">
+    <div class="modal" role="dialog" aria-labelledby="loginTitle">
+      <header id="loginTitle">Log In</header>
+      <div class="body">
+        <input id="liEmail" class="input" placeholder="Email">
+        <div style="height:10px"></div>
+        <input id="liPass" class="input" type="password" placeholder="Password">
+        <div style="height:10px"></div>
+        <button class="btn" onclick="doLogin()" style="width:100%">Enter</button>
+        <div style="height:10px"></div>
+        <button class="btn secondary" style="width:100%" onclick="social('Google')">log in with Gmail account</button>
+        <div style="height:6px"></div>
+        <button class="btn secondary" style="width:100%" onclick="social('Facebook')">log in with Facebook account</button>
+        <div style="height:6px"></div>
+        <a href="#" onclick="signup()">Create a new account</a>
+      </div>
+      <div class="actions">
+        <button class="btn secondary" onclick="closeLogin()">Close</button>
+      </div>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>

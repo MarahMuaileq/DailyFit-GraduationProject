@@ -1,0 +1,168 @@
+
+* {
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(139,92,246,.15), rgba(245,158,11,.15));
+  padding: 15px;
+}
+
+.container {
+  display: flex;
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  background: #bb1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  flex-wrap: wrap; 
+}
+
+.left {
+  flex: 1 1 50%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  min-width: 300px;
+}
+
+.left h1 {
+  font-size: 70px;
+  color: #1e1b75;
+  margin-bottom: 20px;
+}
+
+.left p {
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.right {
+  flex: 1 1 50%;
+  background: #1e1b75;
+  color: #fff;
+  padding: 40px;
+  min-width: 300px;
+}
+
+.right h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.input-box {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.btn {
+  width: 300px;
+  padding: 16px;
+  border: none;
+
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 2px;
+  background-color: #ffffff61;
+
+  border-radius: 17px
+}
+
+.btn:hover {
+  background: darkorange;
+  
+}
+
+.social-btn {
+  width: 300px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: #6a67ce;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; 
+}
+
+.social-btn:hover {
+  background: #5753b5;
+}
+
+.social-btn.gmail {
+
+  background-color: #ffffff61;
+  color: white;
+  border-radius: 17px
+}
+
+.social-btn.gmail:hover {
+  background: #c23321;
+}
+
+.social-btn.facebook {
+  background-color: #ffffff61;
+  color: white;
+  border-radius: 17px}
+  
+
+
+.social-btn.facebook:hover {
+  background: #365899;
+  
+}
+
+.right a {
+  color: #fff;
+  font-size: 13px;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .right {
+    padding: 25px;
+  }
+
+  .left h1 {
+    font-size: 50px;
+  }
+
+}

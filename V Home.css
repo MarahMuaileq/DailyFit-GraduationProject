@@ -1,0 +1,57 @@
+:root {
+  --brand: #191970;
+  --pill-bg: #f3f1fb;
+  --text: #0b0b0b;
+  --bg: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+}
+
+.splash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 2rem;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+.logo {
+  font-size: 10rem;
+  font-weight: 700;
+  color: var(--brand);
+  animation: popIn 1.2s ease;
+}
+
+.tagline {
+  background: var(--pill-bg);
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  animation: slideUp 1.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
