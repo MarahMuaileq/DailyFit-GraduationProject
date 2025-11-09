@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>فيفو ستور — الرئيسية</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+
+  <div class="topbar">
+    <div class="container nav">
+      <a href="V-Home-ar.html"><div class="brand">V</div></a>
+      <a id="nav-home" href="index-ar.html" data-link>الرئيسية</a>
+      <a id="nav-products" href="products-ar.html" data-link>المنتجات</a>
+      <a id="nav-profile" href="profile-ar.html" data-link>حسابي</a>
+      <a id="nav-cart" href="cart-ar.html" data-link>السلة</a>
+      <a id="nav-contact" href="contact-ar.html" data-link>تواصل معنا</a>
+      <div class="spacer"></div>
+      <a href="signup-ar.html">تسجيل الدخول / إنشاء حساب</a>
+      <a href="../index.html"><span class="icon">🌐</span></a>
+    </div>
+  </div>
+
+<main class="container">
+
+  <div class="hero" aria-label="Hero">
+    <h1>حركتك سهلة وآمنة.</h1>
+  </div>
+
+  <h2>أحدث العروض</h2>
+  <div id="offerGrid" class="grid"></div>
+
+  <div class="discount">
+    <div class="discount-left">
+      <div class="mark">✓</div>
+      <div>
+        <h3 class="m0">خصم للزبائن الشهريين!</h3>
+        <p class="m0 muted">شاركنا مشترياتك...</p>
+      </div>
+    </div>
+    <img class="discount-img" src="assets/banner.jpg" alt="عرض تسوق">
+  </div>
+
+  <section id="categories" class="section">
+    <div class="container">
+      <div class="toolbar">
+        <h2>التصنيفات</h2>
+        <a class="btn" href="products-ar.html">عرض الكل →</a>
+      </div>
+
+      <div class="cat-grid">
+        <a class="cat" href="products-ar.html?cat=accessories">
+          <img src="assets/cat-1.jpg" alt="إكسسوارات">
+          <span class="label">إكسسوارات</span>
+        </a>
+
+        <a class="cat" href="products-ar.html?cat=shoes">
+          <img src="assets/cat-2.jpg" alt="أحذية">
+          <span class="label">أحذية</span>
+        </a>
+
+        <a class="cat" href="products-ar.html?cat=bags">
+          <img src="assets/cat-3.jpg" alt="شنط">
+          <span class="label">شنط</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2>آراء العملاء فينا</h2>
+      <div class="list">
+        <div class="item">
+          <img class="avatar" src="assets/u1.jpg" alt="رامي">
+          <div>
+            <strong>رامي أحمد</strong>
+            <div class="meta">خدمة ممتازة، شكراً 🌟</div>
+          </div>
+          <div class="likes">👍 11k</div>
+        </div>
+
+        <div class="item">
+          <img class="avatar" src="assets/u2.jpg" alt="جهاد">
+          <div>
+            <strong>جهاد مور.</strong>
+            <div class="meta">روعة!</div>
+          </div>
+          <div class="likes">👍 11k</div>
+        </div>
+
+        <div class="item item-input">
+          <img class="avatar" src="assets/u3.jpg" alt="you">
+          <input class="input" placeholder="اكتب تعليقك ...">
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<main class="container">
+
+  <h2>تواصل معنا</h2>
+  <div class="card"><div class="p">
+    <div class="row">
+      <input class="input" placeholder="بريدك الإلكتروني">
+      <input class="input" placeholder="اكتب رسالتك">
+    </div>
+    <div style="height:12px"></div>
+    <button class="btn">إرسال</button>
+  </div></div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <div class="brand brand-light">
+            <div class="logo">V</div><strong>Vevo</strong>
+          </div>
+          <p>متجر ملابس، تقدر تطلب الآن ونوصل لعندك.</p>
+        </div>
+        <div>
+          <p>بدأنا العلامة عشان نساعدك تختار استايلك بكل سهولة 👗</p>
+        </div>
+      </div>
+
+      <div class="foot-row">
+        <span>📍 غزة، شارع الرمال</span>
+        <span>📞 0597777773</span>
+        <span>📧 Yousf23@Gmail.Com</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="overlay" id="loginOv">
+    <div class="modal" role="dialog" aria-labelledby="loginTitle">
+      <header id="loginTitle">تسجيل الدخول</header>
+      <div class="body">
+        <input id="liEmail" class="input" placeholder="البريد الإلكتروني">
+        <div style="height:10px"></div>
+        <input id="liPass" class="input" type="password" placeholder="كلمة المرور">
+        <div style="height:10px"></div>
+        <button class="btn" onclick="doLogin()" style="width:100%">دخول</button>
+        <div style="height:10px"></div>
+        <button class="btn secondary" style="width:100%" onclick="social('Google')">تسجيل بحساب جوجل</button>
+        <div style="height:6px"></div>
+        <button class="btn secondary" style="width:100%" onclick="social('Facebook')">تسجيل بحساب فيسبوك</button>
+        <div style="height:6px"></div>
+        <a href="#" onclick="signup()">إنشاء حساب جديد</a>
+      </div>
+      <div class="actions">
+        <button class="btn secondary" onclick="closeLogin()">إغلاق</button>
+      </div>
+    </div>
+  </div>
+
+<script src="app-ar.js"></script>
+</body>
+</html>

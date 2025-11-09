@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>فيفو ستور — المنتجات</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="products">
+
+ <div class="topbar">
+    <div class="container nav">
+      <a href="V-Home-ar.html"><div class="brand">V</div></a>
+      <a id="nav-home" href="index-ar.html" data-link>الرئيسية</a>
+      <a id="nav-products" href="products-ar.html" data-link>المنتجات</a>
+      <a id="nav-profile" href="profile-ar.html" data-link>حسابي</a>
+      <a id="nav-cart" href="cart-ar.html" data-link>السلة</a>
+      <a id="nav-contact" href="contact-ar.html" data-link>تواصل معنا</a>
+      <div class="spacer"></div>
+      <a href="signup-ar.html">تسجيل الدخول / إنشاء حساب</a>
+      <a href="../products.html"><span class="icon">🌐</span></a>
+    </div>
+  </div>
+
+  <main class="container" style="padding-bottom:60px">
+
+    <header style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px;margin:20px 0 30px">
+      <div>
+        <h1 style="margin:0;font-size:28px;line-height:1.2;font-weight:700;color:var(--ink,#111)">المنتجات</h1>
+        <p class="muted" style="margin:4px 0 0;font-size:15px;line-height:1.4">
+          تسوّق واختار اللي يعجبك ✨
+        </p>
+      </div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn secondary" href="products-ar.html">الكل</a>
+        <a class="btn secondary" href="products-ar.html?cat=accessories">إكسسوارات</a>
+        <a class="btn secondary" href="products-ar.html?cat=shoes">أحذية</a>
+        <a class="btn secondary" href="products-ar.html?cat=bags">شنط</a>
+        <a class="btn secondary" href="products-ar.html?cat=clothes">ملابس</a>
+      </div>
+    </header>
+
+    <section id="singleCatSection" style="margin-bottom:40px">
+      <div id="productsGrid" class="grid"></div>
+    </section>
+
+    <section id="allCatsSection" style="margin-bottom:40px">
+
+      <div style="margin-bottom:32px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <h2 style="margin:0;font-size:22px;font-weight:700;color:var(--ink,#111)">شنط</h2>
+          <a class="btn" href="products-ar.html?cat=bags">عرض الكل →</a>
+        </div>
+        <div id="bagsGrid" class="grid"></div>
+      </div>
+
+      <div style="margin-bottom:32px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <h2 style="margin:0;font-size:22px;font-weight:700;color:var(--ink,#111)">أحذية</h2>
+          <a class="btn" href="products-ar.html?cat=shoes">عرض الكل →</a>
+        </div>
+        <div id="shoesGrid" class="grid"></div>
+      </div>
+
+      <div style="margin-bottom:32px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <h2 style="margin:0;font-size:22px;font-weight:700;color:var(--ink,#111)">إكسسوارات</h2>
+          <a class="btn" href="products-ar.html?cat=accessories">عرض الكل →</a>
+        </div>
+        <div id="accGrid" class="grid"></div>
+      </div>
+
+      <div style="margin-bottom:32px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+          <h2 style="margin:0;font-size:22px;font-weight:700;color:var(--ink,#111)">ملابس</h2>
+          <a class="btn" href="products-ar.html?cat=clothes">عرض الكل →</a>
+        </div>
+        <div id="clothesGrid" class="grid"></div>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <div class="brand brand-light"><div class="logo">V</div><strong>Vevo</strong></div>
+          <p>متجر ملابس — اطلب الآن، نوصل لعندك.</p>
+        </div>
+        <div>
+          <p>صممنا البراند عشان يساعد الشباب يختاروا ستايلهم 👟</p>
+        </div>
+      </div>
+      <div class="foot-row">
+        <span>📍 غزة، شارع الرمال</span>
+        <span>📞 0597777773</span>
+        <span>📧 Yousf23@Gmail.Com</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="overlay" id="loginOv">
+    <div class="modal" role="dialog" aria-labelledby="loginTitle">
+      <header id="loginTitle">تسجيل الدخول</header>
+      <div class="body">
+        <input id="liEmail" class="input" placeholder="البريد الإلكتروني">
+        <div style="height:10px"></div>
+        <input id="liPass" class="input" type="password" placeholder="كلمة المرور">
+        <div style="height:10px"></div>
+        <button class="btn" onclick="doLogin()" style="width:100%">دخول</button>
+        <div style="height:10px"></div>
+        <button class="btn secondary" style="width:100%" onclick="social('Google')">تسجيل بحساب جوجل</button>
+        <div style="height:6px"></div>
+        <button class="btn secondary" style="width:100%" onclick="social('Facebook')">تسجيل بحساب فيسبوك</button>
+        <div style="height:6px"></div>
+        <a href="#" onclick="signup()">إنشاء حساب جديد</a>
+      </div>
+      <div class="actions">
+        <button class="btn secondary" onclick="closeLogin()">إغلاق</button>
+      </div>
+    </div>
+  </div>
+
+
+<script src="app-ar.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', ()=>{
+    const params = new URLSearchParams(location.search);
+    const cat = params.get('cat');
+
+    const singleSec = document.getElementById('singleCatSection');
+    const allSec = document.getElementById('allCatsSection');
+
+    if(cat){
+      if(allSec) allSec.style.display = 'none';
+      if(singleSec) singleSec.style.display = 'block';
+    }else{
+      if(allSec) allSec.style.display = 'block';
+      if(singleSec) singleSec.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>

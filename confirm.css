@@ -1,11 +1,11 @@
 :root{
-  --navy:#141255;          
+  --navy:#141255;        
   --navy-2:#0f0d47;
   --ink:#111;
   --muted:#9aa3b2;
   --panel:#100f4b;
   --input:#cfd2e3;         
-  --primary:#ef8c00;       
+  --primary:#ef8c00;      
   --white:#fff;
   --radius:16px;
 }
@@ -58,7 +58,7 @@ body{
   font-size:min(180px,22vw);
   line-height:1;
   color:#19165f;
-  background:transparent; 
+  background:transparent; /* حرف V فقط مثل الصورة */
 }
 
 .tagline{

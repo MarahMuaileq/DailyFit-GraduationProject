@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>فيفو ستور — المنتج</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="product">
+
+ <div class="topbar">
+    <div class="container nav">
+      <a href="V-Home-ar.html"><div class="brand">V</div></a>
+      <a id="nav-home" href="index-ar.html" data-link>الرئيسية</a>
+      <a id="nav-products" href="products-ar.html" data-link>المنتجات</a>
+      <a id="nav-profile" href="profile-ar.html" data-link>حسابي</a>
+      <a id="nav-cart" href="cart-ar.html" data-link>السلة</a>
+      <a id="nav-contact" href="contact-ar.html" data-link>تواصل معنا</a>
+      <div class="spacer"></div>
+      <a href="signup-ar.html">تسجيل الدخول / إنشاء حساب</a>
+      <a href="../product.html"><span class="icon">🌐</span></a>
+    </div>
+  </div>
+<main class="container">
+
+  <div class="detail">
+    <img id="pdImg" alt="المنتج" style="border-radius:var(--radius);box-shadow:var(--shadow)">
+    <div>
+      <h2 id="pdName">إكسسوارات</h2>
+      <div class="stars">★★★★★</div>
+      <div id="pdPrice" class="price">25$</div>
+      <h3>وصف المنتج</h3>
+      <p id="pdDesc" class="muted"></p>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <label>الكمية</label>
+        <div class="qty">
+          <button id="qtyMinus">−</button>
+          <input id="pdQty" value="1" inputmode="numeric" />
+          <button id="qtyPlus">+</button>
+        </div>
+        <button id="btnAddDetail" class="btn">🛒 أضف إلى السلة</button>
+        <button id="btnWish" class="btn secondary">♡ حفظ</button>
+      </div>
+    </div>
+  </div>
+
+  <h2>منتجات مشابهة</h2>
+  <div class="grid" id="relatedGrid"></div>
+
+</main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <div class="brand brand-light"><div class="logo">V</div><strong>Vevo</strong></div>
+          <p>متجر ملابس — نوصل لعندك.</p>
+        </div>
+        <div>
+          <p>هوّنا عليك الاختيار عشان تطلع بأحلى ستايل 😉</p>
+        </div>
+      </div>
+      <div class="foot-row">
+        <span>📍 غزة، شارع الرمال</span>
+        <span>📞 0597777773</span>
+        <span>📧 Yousf23@Gmail.Com</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="overlay" id="loginOv">
+    <div class="modal" role="dialog" aria-labelledby="loginTitle">
+      <header id="loginTitle">تسجيل الدخول</header>
+      <div class="body">
+        <input id="liEmail" class="input" placeholder="البريد الإلكتروني">
+        <div style="height:10px"></div>
+        <input id="liPass" class="input" type="password" placeholder="كلمة المرور">
+        <div style="height:10px"></div>
+        <button class="btn" onclick="doLogin()" style="width:100%">دخول</button>
+        <div style="height:10px"></div>
+        <button class="btn secondary" style="width:100%" onclick="social('Google')">تسجيل بحساب جوجل</button>
+        <div style="height:6px"></div>
+        <button class="btn secondary" style="width:100%" onclick="social('Facebook')">تسجيل بحساب فيسبوك</button>
+        <div style="height:6px"></div>
+        <a href="#" onclick="signup()">إنشاء حساب جديد</a>
+      </div>
+      <div class="actions">
+        <button class="btn secondary" onclick="closeLogin()">إغلاق</button>
+      </div>
+    </div>
+  </div>
+
+<script src="app-ar.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>فيفو ستور — السلة</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="cart">
+
+  <div class="topbar">
+    <div class="container nav">
+      <a href="V-Home-ar.html"><div class="brand">V</div></a>
+      <a id="nav-home" href="index-ar.html" data-link>الرئيسية</a>
+      <a id="nav-products" href="products-ar.html" data-link>المنتجات</a>
+      <a id="nav-profile" href="profile-ar.html" data-link>حسابي</a>
+      <a id="nav-cart" href="cart-ar.html" data-link>السلة</a>
+      <a id="nav-contact" href="contact-ar.html" data-link>تواصل معنا</a>
+      <div class="spacer"></div>
+      <a href="signup-ar.html">تسجيل الدخول / إنشاء حساب</a>
+      <a href="../cart.html"><span class="icon">🌐</span></a>
+    </div>
+  </div>
+
+<main class="container">
+
+  <h2>السلة</h2>
+  <div id="cartEmpty" class="muted">سلة المشتريات فارغة…</div>
+  <div id="cartWrap" hidden>
+    <table>
+      <thead>
+        <tr><th>المنتج</th><th>السعر</th><th>الكمية</th><th>الإجمالي</th><th></th></tr>
+      </thead>
+      <tbody id="cartTable"></tbody>
+    </table>
+
+    <div style="display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:18px">
+      <div></div>
+      <div class="summary">
+        <div style="display:flex;justify-content:space-between"><b>السعر النهائي</b><b id="cartTotal">0$</b></div>
+        <div style="height:10px"></div>
+        <button class="btn" style="width:100%" onclick="openPayment()">تأكيد الطلب</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment Modal -->
+  <div class="overlay" id="payOv">
+    <div class="modal">
+      <header>الدفع</header>
+      <div class="body">
+        <div class="radio">
+          <label><input type="radio" name="pay" value="cod"> الدفع عند الاستلام</label>
+          <label><input type="radio" name="pay" value="card" checked> بطاقة بنكية</label>
+        </div>
+        <div style="height:10px"></div>
+        <input class="input" id="ccNum" placeholder="رقم البطاقة" inputmode="numeric" maxlength="19">
+        <div class="row">
+          <input class="input" id="ccExp" placeholder="MM-YY" maxlength="5">
+          <input class="input" id="ccCvc" placeholder="CVC" maxlength="4" inputmode="numeric">
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn secondary" onclick="closePayment()">إلغاء</button>
+        <button class="btn" onclick="payNow()">ادفع الآن</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="overlay" id="okOv">
+    <div class="modal success">
+      <div class="check">✔</div>
+      <h3>تم إكمال الطلب بنجاح</h3>
+      <div class="muted">شكرًا لثقتك بنا!</div>
+      <div style="height:10px"></div>
+      <button class="btn" onclick="closeSuccess()">متابعة التسوق</button>
+      <div style="height:18px"></div>
+    </div>
+  </div>
+
+</main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div>
+          <div class="brand brand-light"><div class="logo">V</div><strong>Vevo</strong></div>
+          <p>متجر ملابس — نوصل لعندك.</p>
+        </div>
+        <div>
+          <p>نهتم بالستايل، بالسعر، وبالراحة 🖤</p>
+        </div>
+      </div>
+      <div class="foot-row">
+        <span>📍 غزة، شارع الرمال</span>
+        <span>📞 0597777773</span>
+        <span>📧 Yousf23@Gmail.Com</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <div class="overlay" id="loginOv">
+    <div class="modal" role="dialog" aria-labelledby="loginTitle">
+      <header id="loginTitle">تسجيل الدخول</header>
+      <div class="body">
+        <input id="liEmail" class="input" placeholder="البريد الإلكتروني">
+        <div style="height:10px"></div>
+        <input id="liPass" class="input" type="password" placeholder="كلمة المرور">
+        <div style="height:10px"></div>
+        <button class="btn" onclick="doLogin()" style="width:100%">دخول</button>
+        <div style="height:10px"></div>
+        <button class="btn secondary" style="width:100%" onclick="social('Google')">تسجيل بحساب جوجل</button>
+        <div style="height:6px"></div>
+        <button class="btn secondary" style="width:100%" onclick="social('Facebook')">تسجيل بحساب فيسبوك</button>
+        <div style="height:6px"></div>
+        <a href="#" onclick="signup()">إنشاء حساب جديد</a>
+      </div>
+      <div class="actions">
+        <button class="btn secondary" onclick="closeLogin()">إغلاق</button>
+      </div>
+    </div>
+  </div>
+
+<script src="app-ar.js"></script>
+</body>
+</html>
